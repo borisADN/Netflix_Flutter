@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:netflix_app/pages/home_page.dart';
+import 'package:netflix_app/pages/onboarding_page.dart';
 
 class MyLoadingPage extends StatefulWidget {
   const MyLoadingPage({super.key, required this.title});
@@ -33,7 +34,7 @@ Future<Timer> loadAnimation() async {
   onLoaded() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => const MyHomePage(title: 'Netflix App'),
+        builder: (context) =>  OnboardingPage(),
       ),
     );
   }
