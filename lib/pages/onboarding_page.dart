@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_app/pages/signin_page.dart';
 import 'package:netflix_app/pages/widgets/onboarding.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -88,7 +89,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 Container(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SigninPage(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red,
                       foregroundColor: Colors.white,
