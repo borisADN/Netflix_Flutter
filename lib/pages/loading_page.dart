@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:netflix_app/pages/home_page.dart';
 import 'package:netflix_app/pages/onboarding_page.dart';
 
 class MyLoadingPage extends StatefulWidget {
@@ -17,11 +16,17 @@ class MyLoadingPage extends StatefulWidget {
 class _MyLoadingPageState extends State<MyLoadingPage> {
 
   @override
+
+  /// Appel  lorsqu'un objet de type State est inséré  dans l'arbre des widgets.
+  ///
+  /// Cette fonction déclenche l'animation de chargement.
+  @override
   void initState() {
     super.initState();
     loadAnimation();
   }
-
+  /// Fonction qui charge l'animation de chargement pendant 5 secondes,
+  /// puis appelle la fonction [onLoaded] lorsque l'animation est termin e.
 Future<Timer> loadAnimation() async {
   return Timer(
     const Duration(seconds:5),
